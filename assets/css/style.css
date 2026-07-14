@@ -63,3 +63,20 @@ section{
     border-radius: 30px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
+
+
+.botao-gerarsenha{
+    background-color: #2DC0D9;
+    color: #FFF9F9;
+    border: none;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 50px;
+    margin-top: 20px;
+
+    font-family: 'Instrument Sans', sans-serif; 
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
