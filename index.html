@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Gerador de Senhas</title>
@@ -22,9 +23,11 @@
         <main class="main-container">
             <div class="div-main">
                 <h1>Gerador de Senhas aleatorias</h1>
-                <p>Tamanho da senha</p>
-                <input type="range" id="tamanho" min="6" max="30" value="12">
-                <span id="valor-tamanho"></span>
+                <div class="range-container">
+                    <p>Tamanho da senha</p>
+                    <span id="valor-tamanho">12</span>
+                    <input type="range" id="tamanho" min="6" max="30" value="12">
+                </div>
                 <div class="option-item">
                     <label class="switch">
                         <input type="checkbox" id="letras" checked>
@@ -50,7 +53,7 @@
                 </div>
                 <button class="botao-gerarsenha" type="button">Gerar senha</button>
                 <p></p>
-                <input type="text">
+                <input type="text" id="resultado">
                 <button>Copiar</button>
             </div>
         </main>
