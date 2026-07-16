@@ -106,9 +106,11 @@ section{
     border-radius: 34px;
 }
 
-.option-item{
-    margin-bottom: 12px;
-    gap: 12px;
+.option-item {
+    display: flex;      
+    align-items: center; 
+    margin-bottom: 16px; 
+    gap: 12px;          
 }
 
 .slider-toggle:before {
@@ -121,4 +123,13 @@ section{
     background-color: white;
     transition: 0.3s ease;
     border-radius: 50%; 
+}
+
+
+.switch input:checked + .slider-toggle {
+    background-color: #2DC0D9;
+}
+
+.switch input:checked + .slider-toggle:before {
+    transform: translateX(22px); 
 }
