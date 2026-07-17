@@ -5,10 +5,11 @@ function gerarSenha() {
     const tamanhoSenha = 10;
     let letras = true;
     let numeros = true;
-    let caracteresEspeciais = false;
+    let caracteresEspeciais = true;
+    let senhaSegura = [];
 
     let vetorNumeros = ['0','1','2','3','4','5','6','7','8','9'];
-    let vetorLetras = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    let vetorLetras = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
     let vetorEspeciais = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '-', '=', '[', ']', '{', '}', ';', ':', ',', '.', '/', '?', '~'];
 
     let todosCaracteres = [];
@@ -23,5 +24,17 @@ function gerarSenha() {
     if (caracteresEspeciais) {
         todosCaracteres = [...todosCaracteres, ...vetorEspeciais];
     }
-    exibirResultado.value = ` ${todosCaracteres.join(', ')}`;
+
+    for (let index = 0; index < tamanhoSenha; index++) {
+        let valor = gerarNumeroAleatorio(todosCaracteres.length);
+        senhaSegura[index] = todosCaracteres[valor];
+        
+    }
+    exibirResultado.value = ` ${senhaSegura.join('')}`;
+}
+
+function gerarNumeroAleatorio(numeroMaximo){
+    min = 0;
+    max = numeroMaximo;
+    return Math.floor(Math.random() * (max - min) + min);
 }
