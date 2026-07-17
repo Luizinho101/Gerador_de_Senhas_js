@@ -52,9 +52,12 @@
                     <span>Caracteres Especiais</span>
                 </div>
                 <button class="botao-gerarsenha" type="button" onclick="gerarSenha()">Gerar senha</button>
-                <p></p>
-                <input type="text" id="resultado">
-                <button>Copiar</button>
+                <div class="input-container">
+                    <input type="text" id="resultado" readonly placeholder=" Senha ...">
+                    <button id="botao-copiar" type="button">
+                        <img src="assets/img/icons8-copiar-24.png" alt="">
+                    </button>
+                </div>
             </div>
         </main>
     </section>
