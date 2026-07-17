@@ -3,9 +3,9 @@ function gerarSenha() {
     const exibirResultado = document.getElementById('resultado');
 
     const tamanhoSenha = Number(document.getElementById('tamanho').value);
-    let letras = true;
-    let numeros = true;
-    let caracteresEspeciais = true;
+    let letras = document.getElementById('letras').checked;
+    let numeros = document.getElementById('numeros').checked;
+    let caracteresEspeciais = document.getElementById('especiais').checked;
     let senhaSegura = [];
 
     let vetorNumeros = ['0','1','2','3','4','5','6','7','8','9'];
