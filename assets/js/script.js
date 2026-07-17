@@ -2,7 +2,7 @@ function gerarSenha() {
   
     const exibirResultado = document.getElementById('resultado');
 
-    const tamanhoSenha = 10;
+    const tamanhoSenha = Number(document.getElementById('tamanho').value);
     let letras = true;
     let numeros = true;
     let caracteresEspeciais = true;
@@ -38,3 +38,8 @@ function gerarNumeroAleatorio(numeroMaximo){
     max = numeroMaximo;
     return Math.floor(Math.random() * (max - min) + min);
 }
+
+
+document.getElementById('tamanho').addEventListener('input', (evento) => {
+    document.getElementById('valor-tamanho').textContent = evento.target.value;
+});
