@@ -2,6 +2,8 @@ function gerarSenha() {
   
     const exibirResultado = document.getElementById('resultado');
 
+    const botaoCopiar = document.getElementById('botao-copiar');
+
     const tamanhoSenha = Number(document.getElementById('tamanho').value);
     let letras = document.getElementById('letras').checked;
     let numeros = document.getElementById('numeros').checked;
@@ -13,6 +15,18 @@ function gerarSenha() {
     let vetorEspeciais = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '-', '=', '[', ']', '{', '}', ';', ':', ',', '.', '/', '?', '~'];
 
     let todosCaracteres = [];
+
+    botaoCopiar.addEventListener('click', () => {
+        const senhaTexto = exibirResultado.value.trim();
+
+        navigator.clipboard.writeText(senhaTexto)
+        .then(() =>{
+            alert("Senha copiada com sucesso!");
+        })
+        .catch(erro => {
+            console.error("Erro ao copiar a senha: ", erro);
+        });
+    })
 
 
     if (letras) {
