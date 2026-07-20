@@ -235,7 +235,7 @@ input[type="range"]::-webkit-slider-thumb {
     flex-direction: row;
     gap: 10px;
 }
-#botao-copiar{
-      background-color: rgba(217, 217, 217, 0.37);
+#botao-copiar {
+    background-color: transparent; 
     border: none;
 }
